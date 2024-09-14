@@ -1,13 +1,17 @@
 
 
 spring:
+
+#  The SQL dialect makes Hibernate generate better SQL for the chosen database
+  jap:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+#    JPA Settings
   jpa.hibernate.ddl-auto: create
 
   datasource:
     url: jdbc:mysql://localhost:3306/cloud_vendor
     username: root
     password: HelloWorld
-
-# JPA Settings
-
-
